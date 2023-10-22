@@ -8,6 +8,7 @@
 - [ ] E-Mail Server
 - [ ] Samba Server
 - [ ] Samba Webinterface
-- [ ] Wohnzimmer Bot
+- [ ] Wohnzimmer Discord Bot
+- [ ] NetGame Discord Bot
 - [ ] TTT Bot
 - [ ] 
