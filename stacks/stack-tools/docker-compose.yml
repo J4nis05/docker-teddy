@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  archiveTeamWarrior:
+    image: atdr.meo.ws/archiveteam/warrior-dockerfile
+    container_name: archiveTeamWarrior
+    restart: always
+    hostname: archiveTeamWarrior
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+    environment:
+      - DOWNLOADER=Teddy55
+      - SELECTED_PROJECT=auto
+      - CONCURRENT_ITEMS=3
+  
+  nextcloud-db:
+    image: mariadb:latest
+    container_name: nextcloud-db
+    restart: always
+    volumes:
+      - ./data/nextcloud-db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+
+  nextcloud:
+    image: nextcloud:latest
+    container_name: nextcloud
+    restart: always
+    depends_on:
+      - nextcloud-db
+    volumes:
+      - /path/to/data:/var/www/html
+    environment:
+      - MYSQL_HOST=nextcloud-db
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+  
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    volumes:
+      - ./data/vaultwarden:/data
+    environment:
+      WEBSOCKET_ENABLED: "true"
+
+networks:
+  default:
+    external: true
+    name: proxynet

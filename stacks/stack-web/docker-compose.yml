@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  teddy55.com:
+    image: httpd:latest
+    container_name: teddy55.com
+    restart: always
+    volumes:
+      - ./data/teddy55.com/htdocs:/usr/local/apache2/htdocs
+
+networks:
+  default:
+    external: true
+    name: proxynet

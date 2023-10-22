@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  smb-server:
+    image:
+    container_name: smb-server
+    restart: always
+    
+
+  smb-web:
+    image: filebrowser/filebrowser
+    container_name: smb-web
+    restart: unless-stopped
+    volumes:
+      - /path/to/smb/root:/srv
+
+networks:
+  default:
+    external: true
+    name: proxynet

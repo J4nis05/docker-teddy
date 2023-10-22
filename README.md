@@ -1,17 +1,19 @@
 # docker-teddy
 
-## To Do
-
 ### Stacks
 
 #### Bots
-- [ ] Wohnzimmer Bot
 - [ ] NetGame Bot
 - [ ] TTT Bot
+- [ ] Wohnzimmer Bot
 
 #### Data
 - [ ] Samba Server
 - [ ] Samba Webinterface    [share.Teddy55.com](https://share.Teddy55.com)
+
+#### Emails
+- [ ] E-Mail Server
+- [ ] Webmail Server        [Teddy.email](https://teddy.email)
 
 #### Services
 - [ ] OpenVPN Container
@@ -27,6 +29,8 @@
 #### Web
 - [ ] Personal Website:     [Teddy55.com](https://Teddy55.com)
 
-#### Emails
-- [ ] E-Mail Server
-- [ ] Webmail Server        [Teddy.email](https://teddy.email)
+
+## To Do
+* Compose & Config for SMB Server
+* Compose & Config for E-Mail Server
+* Compose & Config for OpenVPN Container
