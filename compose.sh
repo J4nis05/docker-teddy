@@ -5,6 +5,7 @@ declare -A services=(
     ["stack-bots"]="/docker/stack-bots/docker-compose.yml"
     ["stack-data"]="/docker/stack-data/docker-compose.yml"
     ["stack-services"]="/docker/stack-services/docker-compose.yml"
+    ["stack-tools"]="/docker/stack-tools</docker-compose.yml"
     ["stack-web"]="/docker/stack-web/docker-compose.yml"
 )
 
