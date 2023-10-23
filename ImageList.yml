@@ -1,0 +1,24 @@
+# Bots
+teddy55/netgame-bot
+teddy55/ttt-bot
+teddy55/wohnzimmer-bot
+
+# Data
+dperson/samba
+filebrowser/filebrowser
+
+# Emails
+mailserver/docker-mailserver # (?)
+
+# Services
+portainer/portainer
+containrrr/watchtower
+
+# Tools
+atdr.meo.ws/archiveteam/warrior-dockerfile
+arm64v8/mariadb
+nextcloud
+vaultwarden/server
+
+# Web
+httpd

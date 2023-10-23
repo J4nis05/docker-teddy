@@ -4,7 +4,7 @@ services:
   teddy55.com:
     image: httpd:latest
     container_name: teddy55.com
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./data/teddy55.com/htdocs:/usr/local/apache2/htdocs
 

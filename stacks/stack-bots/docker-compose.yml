@@ -2,23 +2,23 @@ version: "3.8"
 
   services:
     netgame-bot:
-      image: teddy55/netgame-bot:latest
+      image: teddy55/netgame-bot
       container_name: netgame-bot
-      restart: always
+      restart: unless-stopped
       volumes:
-        - ./data/netgame/:/WORKDIR/data
-    
+        - ./data/netgame-bot/:/WORKDIR/data
+
     ttt-bot:
-      image: teddy55/ttt-bot:latest
+      image: teddy55/ttt-bot
       container_name: ttt-bot
-      restart: always
+      restart: unless-stopped
       volumes:
         - ./data/ttt-bot/:/WORKDIR/data
-  
+
     wohnzimmer-bot:
-      image: teddy55/wohnzimmer-bot:latest
+      image: teddy55/wohnzimmer-bot
       container_name: wohnzimmer-bot
-      restart: always
+      restart: unless-stopped
       volumes:
         - ./data/wohnzimmer-bot/:/WORKDIR/data
 

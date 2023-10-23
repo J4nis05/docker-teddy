@@ -4,7 +4,7 @@ services:
   archiveTeamWarrior:
     image: atdr.meo.ws/archiveteam/warrior-dockerfile
     container_name: archiveTeamWarrior
-    restart: always
+    restart: unless-stopped
     hostname: archiveTeamWarrior
     labels:
       com.centurylinklabs.watchtower.enable: "true"
@@ -16,7 +16,7 @@ services:
   nextcloud-db:
     image: mariadb:latest
     container_name: nextcloud-db
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./data/nextcloud-db:/var/lib/mysql
     environment:
@@ -28,7 +28,7 @@ services:
   nextcloud:
     image: nextcloud:latest
     container_name: nextcloud
-    restart: always
+    restart: unless-stopped
     depends_on:
       - nextcloud-db
     volumes:
@@ -42,7 +42,7 @@ services:
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./data/vaultwarden:/data
     environment:
