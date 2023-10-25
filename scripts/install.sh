@@ -11,6 +11,7 @@ sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin do
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd
+sudo rm -rf /docker
 
 # Add Docker's official GPG key:
 echo "Installing Docker Daemon and Plug-Ins"
@@ -37,6 +38,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 # Create Required Folders
 echo "Preparing Environment"
 sudo mkdir /docker /docker/tmp
+docker network create proxynet
 
 # Clone the Repository and delete not required folders
 echo "Cloning Repository"
@@ -56,7 +58,7 @@ chmod +x /compose.sh
 
 # Start The Core Services
 echo "Starting Services: Portainer, Watchtower, Nginx, OpenVPN"
-/compose.sh -u stack-services
+docker compose -f /docker/stack-services/docker-compose.yml up -d
 
 # Remove the Repository
 echo "Removing /docker/tmp"

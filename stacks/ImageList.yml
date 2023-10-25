@@ -11,6 +11,7 @@ filebrowser/filebrowser
 mailserver/docker-mailserver # (?)
 
 # Services
+kylemanna/openvpn
 portainer/portainer
 containrrr/watchtower
 

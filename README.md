@@ -1,5 +1,9 @@
 # docker-teddy
 
+Install:
+    
+    curl -sSL https://raw.githubusercontent.com/J4nis05/docker-teddy/main/scripts/install.sh | bash
+
 ### Stacks
 
 #### Bots
@@ -16,6 +20,7 @@
 - [ ] Webmail Server        [Teddy.email](https://teddy.email)
 
 #### Services
+- [ ] Nginx Proxy Manager   [proxy.Teddy55.com](https://proxy.Teddy55.com)
 - [ ] OpenVPN Container
 - [ ] Portainer             [docker.Teddy55.com](https://docker.Teddy55.com)
 - [ ] Watchtower

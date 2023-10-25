@@ -1,8 +1,23 @@
 version: "3.8"
 
 services:
+  nginx:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+      - 81:81
+    volumes:
+      - ./data/nginx/data:/data
+      - ./data/nginx/letsencrypt:/etc/letsencrypt
+    environment:
+      - TZ=Europe/Zurich
+      - DISABLE_IPV6=true
+
   openvpn:
-    image:
+    image: openvpn
     container_name: openvpn
     restart: always
   
@@ -13,7 +28,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   
-    watchtower:
+  watchtower:
     image: containrrr/watchtower
     container_name: watchtower
     restart: always
