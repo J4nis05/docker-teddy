@@ -40,6 +40,24 @@
 
 
 ## To Do
-* Compose & Config for SMB Server
-* Compose & Config for E-Mail Server
-* Compose & Config for OpenVPN Container
+### Stacks
+#### Bots
+- [ ] Create and Push Images to Registry
+- [ ] Update volume Paths
+
+#### Data
+- [ ] Update smb-server Container with correct config
+- [ ] Update volume path in smb-web container
+
+#### Emails
+- [ ] Find and Configure E-Mail Container(s)
+
+#### Services
+- [ ] OpenVPN Configuration
+
+#### Tools
+- [ ] Nextcloud DB Credentials
+- [ ] Nextcloud Data Path and DB Credentials
+
+#### Web
+- [ ] Add All needed Websites to Stack
