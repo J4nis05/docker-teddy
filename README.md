@@ -1,41 +1,63 @@
 # docker-teddy
 
-Install:
+## Installing:
     
     curl -sSL https://raw.githubusercontent.com/J4nis05/docker-teddy/main/scripts/install.sh | bash
 
-### Stacks
+## Uninstalling:
 
-#### Bots
+    curl -sSL https://raw.githubusercontent.com/J4nis05/docker-teddy/main/scripts/remove-docker.sh | bash
+
+## Stacks
+
+### Bots
 - [ ] NetGame Bot
 - [ ] TTT Bot
 - [ ] Wohnzimmer Bot
 
-#### Data
+### Data
 - [ ] Samba Server
 - [ ] Samba Webinterface    [share.Teddy55.com](https://share.Teddy55.com)
 
-#### Emails
+### Emails
 - [ ] E-Mail Server
 - [ ] Webmail Server        [Teddy.email](https://teddy.email)
 
-#### Services
+### Services
 - [ ] Nginx Proxy Manager   [proxy.Teddy55.com](https://proxy.Teddy55.com)
 - [ ] OpenVPN Container
 - [ ] Portainer             [docker.Teddy55.com](https://docker.Teddy55.com)
 - [ ] Watchtower
 
-#### Tools
+### Tools
 - [ ] Archive Team Warrior  [warrior.Teddy55.com](https://warrior.Teddy55.com)
 - [ ] Nextcloud             [nextcloud.Teddy55.com](https://nextcloud.Teddy55.com)
 - [ ] Nextcloud Database
 - [ ] Vaultwarden           [vault.Teddy55.com](https://vault.Teddy55.com)
 
-#### Web
+### Web
 - [ ] Personal Website:     [Teddy55.com](https://Teddy55.com)
 
 
 ## To Do
-* Compose & Config for SMB Server
-* Compose & Config for E-Mail Server
-* Compose & Config for OpenVPN Container
+### Stacks
+#### Bots
+- [ ] Create and Push Images to Registry
+- [ ] Update volume Paths
+
+#### Data
+- [ ] Update smb-server Container with correct config
+- [ ] Update volume path in smb-web container
+
+#### Emails
+- [ ] Find and Configure E-Mail Container(s)
+
+#### Services
+- [ ] OpenVPN Configuration
+
+#### Tools
+- [ ] Nextcloud DB Credentials
+- [ ] Nextcloud Data Path and DB Credentials
+
+#### Web
+- [ ] Add All needed Websites to Stack
