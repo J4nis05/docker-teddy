@@ -3,7 +3,7 @@
 # Full Install Script for the Lazy People 
 echo "Updating And Installing dependencies"
 sudo apt update && sudo apt upgrade -y
-sudo apt install zsh wget neofetch hollywood -y
+sudo apt install zsh wget neofetch hollywood sl -y
 
 # Remove Any Pre Existing Docker Apps, Images and general configuration
 echo "Removing old Docker Confgiuration"
