@@ -33,6 +33,7 @@
 - [ ] Archive Team Warrior  [warrior.Teddy55.com](https://warrior.Teddy55.com)
 - [ ] Nextcloud             [nextcloud.Teddy55.com](https://nextcloud.Teddy55.com)
 - [ ] Nextcloud Database
+- [ ] Synapse Server        [matrix.Teddy55.com](https://matrix.Teddy55.com)
 - [ ] Vaultwarden           [vault.Teddy55.com](https://vault.Teddy55.com)
 
 ### Web

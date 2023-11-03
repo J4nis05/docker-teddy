@@ -38,7 +38,19 @@ services:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
-  
+
+  synapse:
+    image: matrixdotorg/synapse:latest
+    container_name: synapse
+    restart: always
+    volumes:
+      - ./data/synapse:/data
+    environment:
+      VIRTUAL_HOST: "teddy55.com"
+      VIRTUAL_PORT: 8008
+      SYNAPSE_SERVER_NAME: "teddy55.com"
+      SYNAPSE_REPORT_STATS: "yes"
+
   vaultwarden:
     image: vaultwarden/server:latest
     container_name: vaultwarden
