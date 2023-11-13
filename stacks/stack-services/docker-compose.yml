@@ -16,15 +16,17 @@ services:
       - TZ=Europe/Zurich
       - DISABLE_IPV6=true
 
-  openvpn:
-    image: openvpn
-    container_name: openvpn
-    restart: always
+#  openvpn:
+#    image: openvpn
+#    container_name: openvpn
+#    restart: always
   
   portainer:
     image: portainer/portainer
     container_name: portainer
     restart: always
+    ports:
+      - 9000:9000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
   
